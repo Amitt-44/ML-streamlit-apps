@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
+
 
 # Set custom CSS styles for fancy fonts and backgrounds
 st.markdown("""
