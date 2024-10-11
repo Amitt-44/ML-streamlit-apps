@@ -74,7 +74,7 @@ if page == "Investment Options":
     st.header("💹 Investment Opportunities")
 
     # Input Fields for Investment Preferences
-    risk_level = st.selectbox("Select your risk tolerance level:", ["Low", Medium", "High"])
+    risk_level = st.selectbox("Select your risk tolerance level:", ["Low", "Medium", "High"])
     amount_invest = st.number_input("Amount to invest (in USD):", min_value=500, step=100)
     duration = st.number_input("Investment duration (years):", min_value=1, max_value=30)
 
