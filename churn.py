@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import joblib
 # Load the trained model
 model = joblib.load('churn_model.pkl')
 
