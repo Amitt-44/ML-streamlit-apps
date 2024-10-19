@@ -23,11 +23,11 @@ if st.button('Predict Churn'):
         'purchase_frequency': [purchase_frequency]
     })
     
-    # Make prediction
-    #prediction = model.predict(input_data)
+     #Make prediction
+    prediction = model.predict(input_data)
     
     # Display prediction result
-    #if prediction[0] == 1:
-     #   st.success('Customer is likely to churn.')
-   # else:
-    #    st.success('Customer is not likely to churn.')
+    if prediction[0] == 1:
+        st.success('Customer is likely to churn.')
+    else:
+        st.success('Customer is not likely to churn.')
