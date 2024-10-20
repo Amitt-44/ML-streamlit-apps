@@ -446,8 +446,7 @@ if predict:
 st.header('🧭 Little Info About the Project')
 prj_info = """
             Here you can predict used car 🚙 price by giving some information like car brand, model of the car, how much the car has been driven and so on.
-            Then just click on predict button, I recommend to chhose 'RandomForest Regressor' for predict the price because it will give more accurate 
-            result.\n
+            Then just click on predict button.
 """
 st.write(prj_info)
 
