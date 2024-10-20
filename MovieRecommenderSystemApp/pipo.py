@@ -3,9 +3,16 @@ import platform
 import sys
 
 
-# Get Linux distribution information
-distribution = platform.linux_distribution()
-st.write(f"Linux Distribution: {distribution}")
+import os
+
+def get_linux_distribution():
+    if os.path.exists('/etc/os-release'):
+        with open('/etc/os-release') as f:
+            return f.read()
+    return "Not running on a Linux system"
+
+st.write(get_linux_distribution())
+
 
 # Display the Python version
 st.write("Python version:", sys.version)
