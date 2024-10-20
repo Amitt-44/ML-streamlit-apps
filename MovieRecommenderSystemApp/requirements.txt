@@ -1,7 +1,5 @@
 --upgrade pip
 --extra-index-url https://pypi.org/simple
 streamlit==1.26.0
-pandas==2.1.1
-requests==2.31.0
-Pillow<10.0.0  # Specify a range to avoid issues with dependencies
-wheel
+
+
