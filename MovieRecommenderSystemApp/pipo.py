@@ -1,5 +1,6 @@
 import streamlit as st
-import sys
+import platform
 
-# Display the Python version
-st.write("Python version:", sys.version)
+# Display OS information
+os_info = platform.platform()
+st.write("Operating System:", os_info)
