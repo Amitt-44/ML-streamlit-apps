@@ -1,6 +1,6 @@
 
-streamlit==1.26.0  
-pandas==2.1.1      
-requests==2.31.0   
-gdown==4.7.1      
-Pillow==10.0.0     # Add this line for image processing
+streamlit==1.26.0  # or the latest version
+pandas==2.1.1      # or the latest version
+requests==2.31.0   # or the latest version
+Pillow==9.5.0      # Use a version compatible with Streamlit
+
