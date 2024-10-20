@@ -347,7 +347,7 @@ def model_loader(path):
 
 # loading both models
 with st.spinner('🚕Hold on, the app is loading !! 🚕'):
-    model_forest = model_loader("rf1_base_rf.pkl")
+    model_forest = model_loader("Car_Price_Pred_WebApp/rf1_base_rf.pkl")
 
 
 
