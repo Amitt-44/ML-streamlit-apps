@@ -1,4 +1,4 @@
---upgrade pip
+
 --extra-index-url https://pypi.org/simple
 streamlit==1.26.0
 
