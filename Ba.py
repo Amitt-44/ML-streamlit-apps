@@ -37,7 +37,7 @@ page = st.sidebar.selectbox("Choose a feature", ["Home", "Loan Optimization", "I
 if page == "Home":
     st.header("Welcome to the Loan & Investment Optimization Platform!")
     st.write("Manage your loans, explore investment opportunities, and grow your wealth.")
-    st.image("https://via.placeholder.com/800x300", caption="Maximize Your Wealth", use_column_width=True)
+    st.image("https://img.freepik.com/free-vector/finance-financial-performance-concept-illustration_53876-40450.jpg", caption="Maximize Your Wealth", use_column_width=True)
 
 # Loan Optimization Page
 if page == "Loan Optimization":
