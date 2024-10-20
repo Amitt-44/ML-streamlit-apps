@@ -29,7 +29,7 @@ st.title("💸 Loan & Investment Optimization Platform")
 st.write("Maximize your wealth by optimizing your loan payments and investments.")
 
 # Sidebar with navigation and a header image
-st.sidebar.image("https://via.placeholder.com/150", caption="Optimize Your Wealth", use_column_width=True)
+st.sidebar.image("image.jpeg", caption="Optimize Your Wealth", use_column_width=True)
 st.sidebar.title("📊 Menu")
 page = st.sidebar.selectbox("Choose a feature", ["Home", "Loan Optimization", "Investment Options", "Current Rates", "Market Analysis", "Contact Us"])
 
