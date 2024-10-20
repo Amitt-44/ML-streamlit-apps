@@ -1,3 +1,4 @@
-pickle
-streamlit
-os
+streamlit==1.26.0  
+pandas==2.1.1      
+requests==2.31.0   
+gdown==4.7.1      
