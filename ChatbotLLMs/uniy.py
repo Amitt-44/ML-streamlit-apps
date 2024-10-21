@@ -8,7 +8,11 @@ headers = {"Authorization": "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"}
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
-    return response.content
+    if response.status_code == 200:
+        return response.content
+    else:
+        st.error(f"Error: {response.status_code} - {response.text}")
+        return None
 
 # Streamlit UI setup
 st.set_page_config(page_title="Astronaut Horse Generator", layout="wide")
@@ -27,13 +31,18 @@ if st.button("Generate Image"):
         images = []
         for _ in range(num_images):
             image_bytes = query({"inputs": user_input})
-            image = Image.open(io.BytesIO(image_bytes))
-            images.append(image)
+            if image_bytes:  # Check if image_bytes is not None
+                try:
+                    image = Image.open(io.BytesIO(image_bytes))
+                    images.append(image)
+                except Exception as e:
+                    st.error(f"Failed to process image: {e}")
         
-        # Display the images
-        st.success("Images generated successfully!")
-        for img in images:
-            st.image(img, caption=user_input, use_column_width=True)
+        # Display the images if any were generated successfully
+        if images:
+            st.success("Images generated successfully!")
+            for img in images:
+                st.image(img, caption=user_input, use_column_width=True)
 
 # Footer
 st.markdown("---")
@@ -41,8 +50,7 @@ st.markdown("### About")
 st.markdown("This app uses the FLUX.1-dev model from Hugging Face to generate creative images.")
 st.markdown("Made with ❤️ by [Your Name]")
 
-
-
+# CSS for customization
 st.markdown(
     """
     <style>
