@@ -9,7 +9,7 @@ API_URLS = {
     "text_to_image": "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev",
     "text_generation": "https://api-inference.huggingface.co/models/openai-community/gpt2",
     "image_to_image": "",
-    "text_to_speech": "https://api-inference.huggingface.co/models/myshell-ai/MeloTTS-English",
+    "text_to_speech": "https://api-inference.huggingface.co/models/MIT/ast-finetuned-audioset-10-10-0.4593",
 }
 
 # Replace with your actual token
