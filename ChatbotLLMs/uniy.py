@@ -46,7 +46,7 @@ if st.button("Generate Image"):
 
 # Footer
 st.markdown("---")
-st.markdown("### About")
+st.markdown("### ")
 
 st.markdown("Made with ❤️ ")
 
