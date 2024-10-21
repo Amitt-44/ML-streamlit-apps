@@ -25,7 +25,7 @@ def recommend(movie):
 
 
 #similarity = pickle.load(open('similarity.pkl','rb'))#
-file_path = r'similarity.pkl_part0'
+file_path = r'MovieRecommenderSystemApp/similarity.pkl_part0'
 similarity = pickle.load(open(file_path,'rb'))
 
 file_path = r'similarity.pkl_part0'
