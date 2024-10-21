@@ -28,7 +28,7 @@ def recommend(movie):
 file_path = r'MovieRecommenderSystemApp/similarity.pkl_part0'
 similarity = pickle.load(open(file_path,'rb'))
 
-file_path = r'similarity.pkl_part0'
+file_path = r'MovieRecommenderSystemApp/movie_dict.pkl'
 movies_dict = pickle.load(open(file_path, 'rb'))
 movies = pd.DataFrame(movies_dict)
 
