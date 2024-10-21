@@ -13,7 +13,7 @@ API_URLS = {
 }
 
 # Replace with your actual token
-headers = {"Authorization": "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"}
+headers = {"Authorization": "Bearer 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"}
 
 def query(api_url, payload):
     response = requests.post(api_url, headers=headers, json=payload)
