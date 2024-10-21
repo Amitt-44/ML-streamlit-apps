@@ -7,13 +7,13 @@ import numpy as np
 # API URLs for different models (update these with correct URLs)
 API_URLS = {
     "text_to_image": "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev",
-    "text_generation": "https://api-inference.huggingface.co/models/gpt2",
-    "image_to_image": "https://api-inference.huggingface.co/models/your_image_to_image_model",
-    "text_to_speech": "https://api-inference.huggingface.co/models/your_text_to_speech_model",
+    "text_generation": "https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B",
+    "image_to_image": "",
+    "text_to_speech": "https://api-inference.huggingface.co/models/suno/bark",
 }
 
 # Replace with your actual token
-headers = {"Authorization": "Bearer YOUR_API_TOKEN"}
+headers = {"Authorization": "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"}
 
 def query(api_url, payload):
     response = requests.post(api_url, headers=headers, json=payload)
