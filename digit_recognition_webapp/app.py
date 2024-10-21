@@ -6,7 +6,7 @@ from PIL import Image
 from streamlit_drawable_canvas import st_canvas  # Import st_canvas
 
 # Load your trained model
-model = keras.models.load_model(r'digit_recognition_webapp/classifier.keras')
+model = keras.models.load_model(r'digit_recognition_webapp/fred.keras')
 
 # Set page title and icon
 st.set_page_config(page_title="Digit Recognizer", page_icon=":1234:")
