@@ -4,7 +4,7 @@ import io
 from PIL import Image
 
 API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
-headers = {"Authorization": "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"}
+headers = {"Authorization": "Bearer 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"}
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
