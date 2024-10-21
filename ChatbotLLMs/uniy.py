@@ -1,37 +1,68 @@
 import streamlit as st
 import requests
+import io
+from PIL import Image
 
-# Function to fetch predictions from the selected LLM model
-def get_llm_response(prompt, model, api_key):
-    url = f"https://api.unify.ai/v0/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
+API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
+headers = {"Authorization": "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"}
+
+def query(payload):
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.content
+
+# Streamlit UI setup
+st.set_page_config(page_title="Astronaut Horse Generator", layout="wide")
+st.title("🪐 Astronaut Riding a Horse Generator")
+st.markdown(
+    "Create stunning images of astronauts riding horses using a powerful AI model!"
+)
+st.sidebar.header("Settings")
+
+# Input text for image generation
+user_input = st.text_input("Enter a description:", "Astronaut riding a horse")
+num_images = st.slider("Number of images to generate:", 1, 5, 1)
+
+if st.button("Generate Image"):
+    with st.spinner("Generating images..."):
+        images = []
+        for _ in range(num_images):
+            image_bytes = query({"inputs": user_input})
+            image = Image.open(io.BytesIO(image_bytes))
+            images.append(image)
+        
+        # Display the images
+        st.success("Images generated successfully!")
+        for img in images:
+            st.image(img, caption=user_input, use_column_width=True)
+
+# Footer
+st.markdown("---")
+st.markdown("### About")
+st.markdown("This app uses the FLUX.1-dev model from Hugging Face to generate creative images.")
+st.markdown("Made with ❤️ by [Your Name]")
+
+
+
+st.markdown(
+    """
+    <style>
+    .stButton > button {
+        background-color: #4CAF50; /* Green */
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
     }
-    data = {
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}]
+    .stTextInput > div > input {
+        border-radius: 12px;
+        padding: 10px;
     }
-    response = requests.post(url, headers=headers, json=data)
-    return response.json()
-
-# Streamlit UI components
-st.title("Unify AI LLM Selector")
-
-# User input for API key
-api_key = st.text_input("Enter your API key", type="password")
-
-# Dropdown for selecting LLM models
-models = ["gpt-3.5-turbo", "gpt-4", "other_model_name"]  # Add the model names you want to include
-selected_model = st.selectbox("Choose a LLM model", models)
-
-# User input for the prompt
-prompt = st.text_area("Enter your prompt")
-
-# Button to get response
-if st.button("Get Response"):
-    if api_key and prompt:
-        response = get_llm_response(prompt, selected_model, api_key)
-        st.json(response)
-    else:
-        st.warning("Please enter your API key and a prompt.")
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
