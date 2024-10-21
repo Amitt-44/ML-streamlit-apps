@@ -15,10 +15,10 @@ def query(payload):
         return None
 
 # Streamlit UI setup
-st.set_page_config(page_title="Astronaut Horse Generator", layout="wide")
-st.title("🪐 Astronaut Riding a Horse Generator")
+st.set_page_config(page_title="Image Generator", layout="wide")
+st.title("🪐Image generator model")
 st.markdown(
-    "Create stunning images of astronauts riding horses using a powerful AI model!"
+    "Create stunning images of astronauts riding horses using a AI!"
 )
 st.sidebar.header("Settings")
 
@@ -47,8 +47,8 @@ if st.button("Generate Image"):
 # Footer
 st.markdown("---")
 st.markdown("### About")
-st.markdown("This app uses the FLUX.1-dev model from Hugging Face to generate creative images.")
-st.markdown("Made with ❤️ by [Your Name]")
+
+st.markdown("Made with ❤️ ")
 
 # CSS for customization
 st.markdown(
