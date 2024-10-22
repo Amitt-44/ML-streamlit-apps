@@ -16,7 +16,7 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 diabetes_model = pickle.load(open('DiseasePredictionApp/diabetes_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('', 'rb'))
+heart_disease_model = pickle.load(open('DiseasePredictionApp/heart_disease_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('', 'rb'))
 
