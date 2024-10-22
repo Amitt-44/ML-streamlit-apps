@@ -1,1 +1,5 @@
+streamli
+streamlit-option-men
+scikit-learn
+pickle5
 
