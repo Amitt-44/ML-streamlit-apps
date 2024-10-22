@@ -10,6 +10,7 @@ Below are the project links for Applications
 
  https://digitrecognitionset.streamlit.app/       Digit Recognition
 
+Refer to Movie Recommendation pdf for MovieRecommendationApp preview
  
  Currently working on 
  https://4vqrjesdzbjs8qqg4vqkim.streamlit.app/    Investment and finance app 
