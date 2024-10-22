@@ -1,6 +1,4 @@
-streamlit
-streamlit-option-menu
-
-scikit-learn
-pickle5
+streamlit==1.25.0  # or your version
+streamlit-option-menu==0.3.2
+scikit-learn==1.2.2
 
