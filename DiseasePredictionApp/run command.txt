@@ -1,0 +1,1 @@
+streamlit run "C:\Users\44ami\Desktop\disease\app.py"
