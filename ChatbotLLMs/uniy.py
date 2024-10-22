@@ -48,7 +48,7 @@ if st.button("Generate Image"):
 st.markdown("---")
 st.markdown("### ")
 
-st.markdown("Made with ❤️ ")
+st.markdown(" ")
 
 # CSS for customization
 st.markdown(
