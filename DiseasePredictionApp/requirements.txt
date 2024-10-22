@@ -1,5 +1,6 @@
-streamli
-streamlit-option-men
+streamlit
+streamlit-option-menu
+
 scikit-learn
 pickle5
 
