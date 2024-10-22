@@ -6,6 +6,6 @@ Below are the project links for Applications
  
  https://carpricepredictionn.streamlit.app/       Car price Prediction Webapp
 
- https://imagegenn.streamlit.app/                 Text to image predcition 
+ https://imagegenn.streamlit.app/                 Text to image predcition /n
 Currently working on 
  https://4vqrjesdzbjs8qqg4vqkim.streamlit.app/    Investment and finance app 
