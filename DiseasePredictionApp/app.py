@@ -1,8 +1,9 @@
 import os
 import pickle
 import streamlit as st
+import sys
 from streamlit_option_menu import option_menu
-
+st.write(f"Python version: {sys.version}")
 # Set page configuration
 st.set_page_config(page_title="Health Assistant",
                    layout="wide",
