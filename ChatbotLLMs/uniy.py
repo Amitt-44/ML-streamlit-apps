@@ -23,7 +23,7 @@ st.markdown(
 st.sidebar.header("Settings")
 
 # Input text for image generation
-user_input = st.text_input("Enter a description:", "Astronaut riding a horse")
+user_input = st.text_input("Enter a description:", "a man riding a cool f1 car in the city lightss ")
 num_images = st.slider("Number of images to generate:", 1, 5, 1)
 
 if st.button("Generate Image"):
